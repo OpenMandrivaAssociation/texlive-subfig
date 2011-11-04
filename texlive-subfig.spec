@@ -74,6 +74,7 @@ which nearly emulates the subfigure package.
 %doc %{_texmfdistdir}/source/latex/subfig/Makefile
 %doc %{_texmfdistdir}/source/latex/subfig/subfig.dtx
 %doc %{_texmfdistdir}/source/latex/subfig/subfig.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -84,3 +85,5 @@ which nearly emulates the subfigure package.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
