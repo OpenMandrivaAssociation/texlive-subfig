@@ -74,3 +74,17 @@ which nearly emulates the subfigure package.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.3-2
++ Revision: 756302
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.3-1
++ Revision: 719603
+- texlive-subfig
+- texlive-subfig
+- texlive-subfig
+- texlive-subfig
+
