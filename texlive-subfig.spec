@@ -1,19 +1,13 @@
-# revision 15878
-# category Package
-# catalog-ctan /macros/latex/contrib/subfig
-# catalog-date 2010-05-10 00:41:23 +0200
-# catalog-license lppl
-# catalog-version 1.3
 Name:		texlive-subfig
-Version:	1.3
-Release:	11
+Version:	15878
+Release:	1
 Summary:	Figures broken into subfigures
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/subfig
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/subfig.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/subfig.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/subfig.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/subfig.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/subfig.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/subfig.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -39,12 +33,12 @@ subfigure package it includes a configuration file (subfig.cfg)
 which nearly emulates the subfigure package.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -67,24 +61,11 @@ which nearly emulates the subfigure package.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.3-2
-+ Revision: 756302
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.3-1
-+ Revision: 719603
-- texlive-subfig
-- texlive-subfig
-- texlive-subfig
-- texlive-subfig
-
