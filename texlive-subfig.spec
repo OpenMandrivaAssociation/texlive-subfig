@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	Figures broken into subfigures
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/subfig
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/subfig
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/subfig.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/subfig.doc.r%{version}.tar.xz
